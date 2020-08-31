@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+
 
 Route::middleware('auth')->group(function(){
     Route::get('/tweets','TweetController@index')->name('home');
-
     Route::post('/tweets','TweetController@store');
 });
 
+Route::get('profiles/{user}',"ProfilesController@show")->name('profile');
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Auth::routes();

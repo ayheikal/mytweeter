@@ -1,7 +1,7 @@
 <div class="border border-blue-400 rounded-lg px-8 py-6">
     <form method="POST" action="/tweets">
         @csrf
-        <textarea name="body" id="" class="w-full"  placeholder="what's up !"></textarea>
+        <textarea   style="" name="body" id="" class="w-full"  placeholder="what's up !"></textarea>
        @error('body')
            <p class='text-red-500 text-sm'>{{ $message }}</p>
        @enderror
