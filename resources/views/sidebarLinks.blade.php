@@ -1,4 +1,4 @@
-<ul>
+<ul >
     <li><a class="font-bold text-lg mb-r block mb-4" href="/">Home</a></li>
     <li><a class="font-bold text-lg mb-r block mb-4" href="/">Explore</a></li>
     <li><a class="font-bold text-lg mb-r block mb-4" href="/">Notifications</a></li>

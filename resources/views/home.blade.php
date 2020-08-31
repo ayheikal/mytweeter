@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="lg:flex lg:justify-between ">
+<div class="lg:flex lg:justify-between " >
     <div class="lg:w-33 ">
         @include('sidebarLinks')
     </div>
