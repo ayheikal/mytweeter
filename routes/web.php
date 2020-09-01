@@ -22,9 +22,12 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function(){
     Route::get('/tweets','TweetController@index')->name('home');
     Route::post('/tweets','TweetController@store');
+    Route::post('/profiles/{user:name}/follow','FollowsController@store');
+    Route::delete('/profiles/{user:name}/unfollow','FollowsController@destroy');
+    Route::get('/profiles/{user:name}/edit','ProfilesController@edit');
 });
 
-Route::get('profiles/{user}',"ProfilesController@show")->name('profile');
+Route::get('profiles/{user:name}',"ProfilesController@show")->name('profile');
 // Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
