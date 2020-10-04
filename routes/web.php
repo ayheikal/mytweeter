@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 
@@ -26,6 +23,8 @@ Route::middleware('auth')->group(function(){
     Route::delete('/profiles/{user:name}/unfollow','FollowsController@destroy');
     Route::get('/profiles/{user:name}/edit','ProfilesController@edit');
     Route::patch('/profiles/{user:name}','ProfilesController@update');
+    Route::get('/explore',"ExploreController@index");
+
 });
 
 Route::get('profiles/{user:name}',"ProfilesController@show")->name('profile');

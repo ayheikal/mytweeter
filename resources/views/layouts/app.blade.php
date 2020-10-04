@@ -24,7 +24,16 @@
      <section class="px-8 py-4">
          <header class="container mx-auto">
              <h1>
-             <img style="width: 130px; height:70px;" src="/images/logo.png" alt='tweety'>
+             <img  style="width: 130px; height:50px;" src="/images/logo.png" alt='tweety'>
+                 @if(auth()->check())
+                 <ul style="position: absolute;top:44px;right:32px">
+                     <li><a href="{{route("logout")}}">Logout</a></li>
+                 </ul>
+                 @else
+                     <ul style="position: absolute;top:44px;right:32px">
+                         <li><a href="{{route("register")}}">register</a></li>
+                     </ul>
+                 @endif
              </h1>
         </header>
      </section>
@@ -35,13 +44,13 @@
                 <div class="lg:w-33 ">
                     @include('sidebarLinks')
                 </div>
-            
+
                @yield('content')
-            
-                
+
+
                     @include('friendsList')
-                
-            
+
+
             </div>
         </main>
     </section>
