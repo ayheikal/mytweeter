@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: linear-gradient(to top right,red,blue);
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -21,7 +21,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 95vh;
             }
 
             .flex-center {
@@ -61,27 +61,42 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            footer{
+                color:rgb(14, 4, 43);
+                font-weight: bolder;
+                margin-left: 15px;
+                
+            }
+            a:hover{
+                padding: 4px;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(15, 15, 15);
+            }
+           
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md " style="color:rgb(187, 173, 173)">
+                    MY TWEETER
                 </div>
 
-                <div class="links">
+                <div class="links" style="color:black">
                   @auth
                       <a href="{{ url('/tweets') }}">Home </a>
                       <a href="{{ url('logout') }}">Logout</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a style="color:white" href="{{ route('login') }}">Login</a>
+                        <a style="color:white" href="{{ route('register') }}">Register</a>
                        
                   @endauth
                 </div>
             </div>
         </div>
+        <footer>developed by Ayman Gamal</footer>
     </body>
+    
 </html>

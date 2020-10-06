@@ -18,20 +18,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <script
+    src="https://kit.fontawesome.com/765f612e6e.js"
+    crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <div id="app">
-     <section class="px-8 py-4">
+     <section class="px-8 py-4" id="heading">
          <header class="container mx-auto">
              <h1>
-             <img  style="width: 130px; height:50px;" src="/images/logo.png" alt='tweety'>
+             <img  style="width: 130px; height:50px;" src="/images/logo.png" alt='tweety' id="logo-img">
                  @if(auth()->check())
-                 <ul style="position: absolute;top:44px;right:32px">
+                 <ul id="logout-btn" style="position: absolute;top:20px;right:32px">
                      <li><a href="{{route("logout")}}">Logout</a></li>
                  </ul>
                  @else
-                     <ul style="position: absolute;top:44px;right:32px">
-                         <li><a href="{{route("register")}}">register</a></li>
+                     <ul id="nav-link" >
+                         <li id="register"><a href="{{route("register")}}">register</a></li>
                      </ul>
                  @endif
              </h1>

@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+Route::get('/',function(){
 
+    return view('welcome');
+});
 
 Route::middleware('auth')->group(function(){
     Route::get('/tweets','TweetController@index')->name('home');
@@ -24,6 +27,9 @@ Route::middleware('auth')->group(function(){
     Route::get('/profiles/{user:name}/edit','ProfilesController@edit');
     Route::patch('/profiles/{user:name}','ProfilesController@update');
     Route::get('/explore',"ExploreController@index");
+    Route::post('/tweets/{tweet}/like','TweetLikesController@store');
+    Route::delete('/tweets/{tweet}/dislike','TweetLikesController@destroy');
+
 
 });
 

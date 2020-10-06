@@ -1,5 +1,5 @@
 @if (auth()->check())
-<div class=" lg:w-1/6 bg-blue-100 rounded-lg p-2" >
+<div class=" lg:w-1/6 bg-blue-100 rounded-lg p-2" id="friendList">
     <h3 class="font-bold text-xl mb-4">Following</h3>
     <ul>
         
